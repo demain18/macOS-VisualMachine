@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Macbook Pro</title>
+        <link
+            rel="stylesheet"
+            href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: radial-gradient(circle at center, white, gray);
+            }
+
+            .macbook {
+                width: 100em;
+                font-size: 8px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .screen {
+                width: 80em;
+                height: calc(80em * 0.667);
+                background-color: black;
+                border-radius: 3% 3% 0 0 / 5%;
+                border: 0.2em solid silver;
+                border-bottom: none;
+                position: relative;
+            }
+            /* 1280px * 853px */
+
+            .screen::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(255, 255, 255, 0);
+                margin: 4.3% 3.2%;
+            }
+
+            .base {
+                width: inherit;
+                height: 2.3em;
+                background: linear-gradient(white, white 55%, #999 60%, #222 90%, rgba(0, 0, 0, 0.1) 100%);
+                border-radius: 0 0 10% 10% / 0 0 50% 50%;
+                position: relative;
+            }
+
+            .base::before {
+                content: '';
+                position: absolute;
+                width: inherit;
+                height: 55%;
+                background-color: white;
+            }
+
+            .base::after {
+                content: '';
+                position: absolute;
+                width: 14em;
+                height: 0.7em;
+                background-color: #ddd;
+                left: calc(50% - 7em);
+                box-shadow: inset -0.5em -0.1em 0.3em rgba(0, 0, 0, 0.2), inset 0.5em 0.1em 0.3em rgba(0, 0, 0, 0.2);
+                border-radius: 0 0 7% 7% / 0 0 95% 95%;
+            }
+            .macbook-title {
+                color: white;
+                font-size: 16px;
+                font-family: Corbel;
+                position: absolute;
+                top: 487px;
+                left: 359px;
+            }
+            .macOSscreen {
+                position: absolute;
+                top: 30px;
+                left: 25px;
+            }
+            .powered-by {
+                position: fixed;
+                bottom: 0px;
+                right: 15px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            /* $( function() {
+    $( "#draggable" ).draggable({ containment: "#parent-container", scroll: false } );
+  } ); */
+        </script>
+    </head>
+    <body>
+
+        <div class="macbook">
+            <span class="screen">
+                <iframe
+                    src="macOS_login.html"
+                    frameborder="0"
+                    width="749"
+                    height="465"
+                    class="macOSscreen"></iframe>
+                <p class="macbook-title">Macbook Pro</p>
+            </span>
+            <span class="base"></span>
+        </div>
+        <p class="powered-by">Powered by
+            <strong>CODEPEN</strong>
+        </p>
+
+    </body>
+</html>

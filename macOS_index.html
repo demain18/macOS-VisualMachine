@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Macbook pro</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+            integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+            crossorigin="anonymous">
+        <link
+            rel="stylesheet"
+            href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+        <!-- font-family: 'Questrial', sans-serif; From GoogleFont -->
+        <style>
+            .macOS_index {
+                width: 748.81px;
+                height: 464.81px;
+                font-family: 'Questrial', sans-serif;
+                background: url("asset/img/macOS_wallpaper.jpg");
+                position: relative;
+            }
+            .macOS_header {
+                width: 100%;
+                height: 25px;
+                background-color: whitesmoke;
+                border-bottom: 1px solid #c9c9c9;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+            .sp1 {
+                font-size: 14px;
+                margin-left: 3px;
+            }
+            .sp1-1 {
+                position: relative;
+                top: -1px;
+                margin-left: 20px;
+                margin-right: 10px;
+            }
+            .sp1-2 {
+                margin-right: 10px;
+            }
+            .header_box2 {
+                position: absolute;
+                right: 0;
+            }
+            .macOS_menu {
+                width: 383px;
+                position: absolute;
+                left: 50%;
+                top: 396px;
+                margin-left: -185px;
+                background-color: rgba(121, 121, 121, 0.3);
+                border-radius: 5px;
+            }
+            .sp3 {
+                margin: 10px;
+            }
+            .sp3-1 {
+                margin-left: 19px;
+            }
+            .sp3-5 {
+                margin-right: 10px;
+            }
+            .macOS_window_example {
+                width: 450px;
+                height: 280px;
+                background-color: rgba(240, 248, 255, 0.88);
+                border-radius: 5px;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                position: relative;
+                overflow: scroll;
+                -ms-overflow-style: none;
+                color: black;
+            }
+            .macOS_window_example_header {
+                width: 450px;
+                height: 20px;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid whitesmoke;
+                border-radius: 5px;
+                position: fixed;
+            }
+            .macOSbtn {
+                display: inline-block;
+                margin: 5px 1px 5px 5px;
+            }
+            .macOSbtn-exit {
+                width: 10px;
+                height: 10px;
+                background-color: #ff5252;
+                cursor: pointer;
+            }
+            .macOSbtn-samllest {
+                width: 10px;
+                height: 10px;
+                background-color: #ffd257;
+                cursor: pointer;
+            }
+            .macOSbtn-largeest {
+                width: 10px;
+                height: 10px;
+                background-color: #2bd92b;
+                cursor: pointer;
+            }
+            ::-webkit-scrollbar {
+                display: none;
+            }
+            #parent-container {
+                width: 747px;
+                height: 430px;
+                /* background-color: rgba(6, 139, 255, 0.28); */
+            }
+            .invisualble {
+                width: 100px;
+                height: 20px;
+                background-color: rgba(255, 255, 255, 0);
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $("#draggable").draggable({containment: "#parent-container", scroll: false});
+                /* alert(nowtime); */
+                /*
+        setInterval(function() {
+            var nowtime = new Date();
+            $( "#time_now" ).text(nowtime);
+            document.write(nowtime);
+        }, 1000);
+    타이머 기능 당분간 보류*/
+            });
+        </script>
+    </head>
+    <body>
+
+        <div class="macOS_index">
+            <div class="macOS_header">
+                <span class="header_box1">
+                    <span class="sp1 sp1-1"><img src="asset/img/apple.png" alt="apple_logo" width="16"></span>
+                    <span class="sp1 sp1-2">
+                        <strong>Finder</strong>
+                    </span>
+                    <span class="sp1 sp1-3">File</span>
+                    <span class="sp1 sp1-4">Edit</span>
+                    <span class="sp1 sp1-5">View</span>
+                    <span class="sp1 sp1-6">GO</span>
+                    <span class="sp1 sp1-7">Window</span>
+                    <span class="sp1 sp1-8">Help</span>
+                </span>
+                <span class="header_box2">
+                    <span id="time_now"></span>
+                    <span class="sp2 sp2-1"><img src="asset/img/wifi.png" width="16"></span>
+                    <span class="sp2 sp2-2"><img src="asset/img/battery.png" width="20"></span>
+                    <span class="sp2 sp2-3"><img src="asset/img/search.png" width="16"></span>
+                </span>
+            </div>
+
+            <!-- This is Ajax window inpage part -->
+
+            <div id="parent-container">
+
+                <div class="macOS_window_example" id="draggable">
+                    <div class="macOS_window_example_header">
+                        <div class="rounded-circle macOSbtn macOSbtn-exit"></div>
+                        <div class="rounded-circle macOSbtn macOSbtn-samllest"></div>
+                        <div class="rounded-circle macOSbtn macOSbtn-largeest"></div>
+                    </div>
+                    <div class="invisualble"></div>
+                    <iframe
+                        src="https://www.appstore.com/"
+                        frameborder="0"
+                        width="450"
+                        height="260"
+                        scrolling="no"></iframe>
+                </div>
+
+                <div class="macOS_menu">
+                    <img
+                        src="asset/img/appStore%201.png"
+                        alt="appstore"
+                        width="50"
+                        class="sp3 sp3-1">
+                    <img src="asset/img/Messages.png" alt="message" width="50" class="sp3 sp3-2">
+                    <img src="asset/img/maps.png" alt="maps" width="50" class="sp3 sp3-3">
+                    <img src="asset/img/Safari.png" alt="safari" width="50" class="sp3 sp3-4">
+                    <img
+                        src="asset/img/trashempty-01.png"
+                        alt="trashempty"
+                        width="50"
+                        class="sp3 sp3-5">
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

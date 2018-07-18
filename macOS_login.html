@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Macbook pro</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+            integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+            crossorigin="anonymous">
+        <link
+            rel="stylesheet"
+            href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <style>
+            .macOS_login {
+                width: 748.81px;
+                height: 464.81px;
+            }
+            .macOS_login_inpage {
+                width: 748.81px;
+                height: 464.81px;
+                background: url("asset/img/macOS_login_wallpaper.png");
+            }
+            .macOS_align {
+                width: 300px;
+                height: 100%;
+                position: relative;
+                left: 50%;
+                margin-left: -150px;
+            }
+            .rounded-circle {
+                position: relative;
+                left: 50%;
+                margin-left: -30px;
+                margin-top: 70px;
+            }
+            .user_name {
+                text-align: center;
+                color: rgb(234, 234, 234);
+                margin-top: 10px;
+            }
+            .form-control {
+                width: 160px;
+                position: relative;
+                left: 50%;
+                margin-left: -75px;
+                margin-top: 10px;
+            }
+            .cancel {
+                position: relative;
+                left: 50%;
+                margin-left: -15px;
+                margin-top: 180px;
+            }
+            .cancel_test {
+                position: relative;
+                left: 50%;
+                margin-left: -19px;
+                margin-top: 8px;
+                font-size: 13px;
+                font-family: Gadugi;
+                color: rgb(234, 234, 234);
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $("#enter-target").keydown(function (key) {
+
+                    if (key.keyCode == 13) { //키가 13이면 실행 (엔터는 13)
+                        pagemove1();
+                    }
+
+                });
+
+                pagemove1 = function () {
+                    location.href = "macOS_index.html";
+                };
+
+            });
+        </script>
+    </head>
+    <body>
+
+        <div class="macOS_login">
+            <div class="macOS_login_inpage">
+                <div class="macOS_align">
+                    <img src="asset/img/3810_9397_167.jpg" width="60" class="rounded-circle">
+                    <p class="user_name">Admin</p>
+                    <input
+                        class="form-control form-control-sm"
+                        type="text"
+                        placeholder="Enter Password"
+                        id="enter-target">
+                    <img src="asset/img/cancel.png" width="30" class="cancel">
+                    <p class="cancel_test">Cancel</p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
